@@ -1,0 +1,112 @@
+.content-header{
+    font-family: 'Oleo Script', cursive;
+    color:#fcc500;
+    font-size: 45px;
+}
+
+.section-content{
+    text-align: center;
+}
+
+#contact{
+    font-family: 'Teko', sans-serif;
+    padding-top: 60px;
+    width: 100%;
+    width: 100vw;    background: #3a6186; /* fallback for old browsers */
+    background-size: auto 100%;
+    background: -webkit-linear-gradient(to left, #3a6186 , #89253e); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #3a6186 , #89253e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color : #fff;
+}
+
+.contact-section{
+    padding-top: 40px;
+}
+
+.contact-section .col-md-6{
+    width: 50%;
+}
+
+.form-line{
+    border-right: 1px solid #B29999;
+}
+
+.form-group{
+    margin-top: 10px;
+}
+
+label{
+    font-size: 1.3em;
+    line-height: 1em;
+    font-weight: normal;
+}
+
+.form-control{
+    font-size: 1.3em;
+    color: #080808;
+}
+
+textarea.form-control {
+    height: 135px;
+}
+
+.submit{
+    font-size: 1.1em;
+    float: right;
+    width: 150px;
+    background-color: transparent;
+    color: #fff;
+}
+
+blockquote{
+    border-left:none
+}
+
+.quote-badge{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.quote-box{
+    overflow: hidden;
+    margin-top: -50px;
+    padding-top: -100px;
+    border-radius: 17px;
+    background-color: #4ADFCC;
+    margin-top: 25px;
+    color:white;
+    width: 325px;
+    box-shadow: 2px 2px 2px 2px #E0E0E0;
+
+}
+
+.quotation-mark{
+    margin-top: -10px;
+    font-weight: bold;
+    font-size:100px;
+    color:white;
+    font-family: "Times New Roman", Georgia, Serif;
+
+}
+
+.quote-text{
+    font-size: 19px;
+    margin-top: -65px;
+}
+
+.navbar-text {
+    color: #fff;
+    float: left;
+    line-height: 32px;
+    margin-left: 200px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+
+.navbar-center {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    text-align: center;
+}
