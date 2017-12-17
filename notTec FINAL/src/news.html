@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>NotTec - Noticia Destacada</title>
+    <link rel="shortcut icon" href="../images/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/footer-distributed-with-address-and-phones.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.css">
+    <link rel="stylesheet" type="text/css" href="../css/stylesign.css" />
+    <link rel="stylesheet" type="text/css" href="../css/estilonews.css" />
+    <link rel="stylesheet" type="text/css" href="../css/select.css" />
+    <link rel='stylesheet' id='camera-css'  href='../css/camera.css' type='text/css' media='all'>
+    <script type='text/javascript' src='../script/jquery.min.js'></script>
+    <script type='text/javascript' src='../script/jquery.mobile.customized.min.js'></script>
+    <script type='text/javascript' src='../script/jquery.easing.1.3.js'></script>
+    <script type='text/javascript' src='../script/camera.min.js'></script>
+    <link rel="stylesheet" type="text/css" href="../css/dropdown.css" />
+    <script type='text/javascript' src='../script/dropdownsearch.js'></script>
+    <script>
+        jQuery(function(){
+            jQuery('#camera_wrap_1').camera({
+                thumbnails: true
+            });
+
+            jQuery('#camera_wrap_2').camera({
+                height: '400px',
+                loader: 'bar',
+                pagination: false,
+                thumbnails: true
+            });
+        });
+        function loadXMLDoc() {
+            var xmlhttp;
+            if (window.XMLHttpRequest) {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp=new XMLHttpRequest();
+            } else {
+                // code for IE6, IE5
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange=function()
+            {
+                if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                {
+                    document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+                    //alert(xmlhttp.responseText);
+                }
+            }
+            var mail=document.getElementById("email").value;
+            var url = '../src/validation.php?dmail='+mail;
+            xmlhttp.open("GET",url,true);
+            xmlhttp.send();
+            location.reload();
+        }
+    </script>
+
+</head>
+<body>
+
+<div class="cabecera">
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">NotTec</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="#">Contacto</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="logIn.html">Login</a></li>
+                <li><a href="signUp.html">Regístrate</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="logo">
+        <a href="index.html"><img src="../images/logo.PNG" alt="NotTec Logo" width="296" height="153"></a>
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Categorías</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="gangas.html">Gangas</a>
+                <a href="#">Tecnología</a>
+                <a href="#">Series</a>
+            </div>
+        </div>
+        <form onsubmit="submitFn(this, event);">
+            <div class="search-wrapper">
+                <div class="input-holder">
+                    <input type="text" class="search-input" placeholder="Busca en nuestra web" />
+                    <button class="search-icon" onclick="searchToggle(this, event);"><span></span></button>
+                </div>
+                <span class="close" onclick="searchToggle(this, event);"></span>
+                <div class="result-container">
+
+                </div>
+            </div>
+        </form>
+        <div class="rrss">
+            <a href="https://es-es.facebook.com/"><img src="../images/rrss1.png" alt="Red Social 1" width="53" height="53"border="0"></a>
+            <a href="https://plus.google.com/"><img src="../images/rrss2.png" alt="Red Social 2" width="53" height="53"border="0"></a>
+            <a href="https://twitter.com/"><img src="../images/rrss3.png" alt="Red Social 3" width="53" height="53"border="0"></a>
+        </div>
+    </div>
+</div>
+
+<div class="titulo">
+    <h1>Título noticia destacada</h1>
+    <ul>
+        <li class="fa fa-facebook"> 849</li>
+        <li class="fa fa-twitter"> 762</li>
+        <li class="fa fa-envelope"> 827</li>
+    </ul>
+</div>
+
+<div class="imagen">
+    <img src="../images/imagenNoticia.jpg" alt="Imagen noticia">
+    <div class="piefoto">
+    <h6>hace 4 horas - Actualizado 7 Diciembre 2017, 15:59</h6>
+    <ul>
+        <li class="fa fa-heart">Guardar</li>
+        <li class="fa fa-comments">Comentarios</li>
+    </ul>
+    </div>
+</div>
+
+<div class="derecho">
+    <h4>Suscribete a notTec</h4>
+    <h6>Recibe un email al día con nuestros artículos:</h6>
+    <div class="formulario">
+        <form id="form" method="post" action="#">
+            <div class="inputs">
+                <input type="email" name="demail" id="email" placeholder="Correo electrónico">
+                <input type="button" onClick="loadXMLDoc()" name="newsletter" id="newsletter" value="Suscribir">
+            </div>
+        </form>
+        <div id="myDiv" style="color:#993300;fonr-size:60px;text-align:center;width:200px;border:1px solid #F8F8F8"></div>
+    </div>
+
+    <div class="follow">
+        <h5>Síguenos</h5>
+        <a class="btn btn-social-icon btn-twitter">
+            <span class="fa fa-twitter"></span>
+        </a>
+        <a class="btn btn-social-icon btn-facebook">
+            <span class="fa fa-facebook"></span>
+        </a>
+        <a class="btn btn-social-icon btn-google">
+            <span class="fa fa-google"></span>
+        </a>
+        <a class="btn btn-social-icon btn-flickr">
+            <span class="fa fa-flickr"></span>
+        </a>
+        <a class="btn btn-social-icon btn-pinterest">
+            <span class="fa fa-pinterest"></span>
+        </a>
+        <a class="btn btn-social-icon btn-instagram">
+            <span class="fa fa-instagram"></span>
+        </a>
+    </div>
+
+    <div class="recomendar">
+        <h5>TE RECOMENDAMOS</h5>
+        <div class="noticiasrecomendadas">
+            <img src="../images/series-tv.jpg" alt="Noticia">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum ex facilis impedit iusto, minus obcaecati quaerat
+                quas ratione rerum veniam voluptate? Accusamus sequi sint suscipit. </p>
+        </div>
+        <div class="noticiasrecomendadas">
+            <img src="../images/series-tv.jpg" alt="Noticia">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum ex facilis impedit iusto, minus obcaecati quaerat
+                quas ratione rerum veniam voluptate? Accusamus sequi sint suscipit. </p>
+        </div>
+        <div class="noticiasrecomendadas">
+            <img src="../images/series-tv.jpg" alt="Noticia">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum ex facilis impedit iusto, minus obcaecati quaerat
+                quas ratione rerum veniam voluptate? Accusamus sequi sint suscipit. </p>
+        </div>
+        <div class="noticiasrecomendadas">
+            <img src="../images/series-tv.jpg" alt="Noticia">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum ex facilis impedit iusto, minus obcaecati quaerat
+                quas ratione rerum veniam voluptate? Accusamus sequi sint suscipit. </p>
+        </div>
+    </div>
+</div>
+
+
+<div class="editor">
+    <img src="../images/user.png" alt="Editor">
+    <div class="contacto">
+        <a href="#"><span>Nombre Redactor</span></a>
+        <a href="#">Cuenta twitter</a>
+    </div>
+</div>
+
+
+<div class="noticia">
+    <p>Es un secreto a voces: el Bitcoin consume mucha energía. Muchísima. Pero las lavadoras, las tabletas y las calefacciones eléctricas,
+        también. Así que… ¿Cuánto es mucho? ¿Qué son realmente 32 teravatios hora de energía? Porque cuando no estamos acostumbrados a manejar
+        este tipo de cantidades,<b>todo se vuelve muy abstracto.</b> <br/><br/>
+
+        Más fácil es señalar que a día de hoy, el consumo de energía del Bitcoin es superior a países como Serbia, Irlanda o Marruecos.
+        Y que si lo incluyésemos en una lista de países por consumo energético superaría a unos 130 de ellos. No sé si se trata de una cantidad descomunal,
+        pero sin lugar a dudas estamos hablando de palabras mayores.<br/><br/></p>
+    <h1><b>Más madera</b></h1>
+    <img src="../images/grafica.jpg" alt="Grafica">
+    <p>Los dos datos, tanto el consumo del Bitcoin, como el consumo de los países, son difíciles de estimar con exactitud. El primero porque no hay forma real de saber qué máquinas están
+        funcionando y cuánto están consumiendo más que por aproximación. En segundo porque el sector energético sigue siendo un tema de “seguridad nacional”, los datos son malos
+        y suelen estar desactualizados (los más fiables son de 2014, por ejemplo).<br/><br/>
+        Pese a estos problemas, las cifras son consistentes sin llegar a los 159 de los que hablaba la consultora inglesa PowerCompare
+        hace unas semanas. Llegadas a estas cifras, tampoco sería sorprendente: al fin y al cabo, <b>más de la mitad de la energía anual</b>
+        la consumen en China, Estados Unidos y la Unión Europea. Y hay países con consumos muy muy modestos. </p>
+    <h1><b>¿Es malo el Bitcoin para el medio ambiente?</b></h1>
+    <img src="../images/bitcoin.jpg" alt="Bitcoin">
+    <p>Todo esto tiene una consecuencia imprevista: si hace seis meses los ecologistas esperaban que el blockchain se convirtiera en una herramienta
+        en defensa del medio ambiente y contra el cambio climático, hoy hay analistas alertan contra el impacto ambiental que esta tremenda cantidad de
+        energía puede provocar. Un impacto que, sin lugar a dudas, debemos tener en cuenta.<br/><br/>
+
+        Es sí, contextualizado. Hace unos meses, Javi Pastor comentaba aquí mismo que, siendo mucho, debíamos ser conscientes de que resulta una comparación
+        un poco artificial. Las lavadoras, los iPads y las televisiones también consumen mucha energía y no debemos olvidarlo a la hora de hacer estas comparaciones.
+        Pero, con todas las advertencias, saber que el Bitcoin tiene el tamaño energético de Serbia es muy iluminador y nos permite saber de qué estamos hablando realmente. Para bien y para mal.</p>
+    <div class="pienoticia">
+        <div class="temas">
+            <h6>Temas: </h6>
+            <ul>
+                <li class="fa fa-tag"> Energía</li>
+                <li class="fa fa-tag"> Consumo</li>
+                <li class="fa fa-tag"> Medio ambiente</li>
+                <li class="fa fa-tag"> Bitcoin</li>
+            </ul>
+        </div>
+        <div class="compartir">
+            <h6>Compartir: </h6>
+            <ul>
+                <li class="fa fa-facebook"> 849</li>
+                <li class="fa fa-twitter"> 762</li>
+                <li class="fa fa-envelope"> 827</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- http://www.pixedelic.com/plugins/camera/ -->
+<div class="noticiasrelacionadas">
+    <div class="fluid_container">
+        <h1>Noticias relacionadas</h1>
+        <div class="camera_wrap camera_azure_skin" id="camera_wrap_1">
+            <div data-thumb="../images/slides/thumbs/bridge.jpg" data-src="../images/slides/bridge.jpg">
+                <div class="camera_caption fadeFromBottom">
+                    Camera is a responsive/adaptive slideshow. <em>Try to resize the browser window</em>
+                </div>
+            </div>
+            <div data-thumb="../images/slides/thumbs/leaf.jpg" data-src="../images/slides/leaf.jpg">
+                <div class="camera_caption fadeFromBottom">
+                    It uses a light version of jQuery mobile, <em>navigate the slides by swiping with your fingers</em>
+                </div>
+            </div>
+            <div data-thumb="../images/slides/thumbs/road.jpg" data-src="../images/slides/road.jpg">
+                <div class="camera_caption fadeFromBottom">
+                    <em>It's completely free</em> (even if a donation is appreciated)
+                </div>
+            </div>
+            <div data-thumb="../images/slides/thumbs/sea.jpg" data-src="../images/slides/sea.jpg">
+                <div class="camera_caption fadeFromBottom">
+                    Camera slideshow provides many options <em>to customize your project</em> as more as possible
+                </div>
+            </div>
+            <div data-thumb="../images/slides/thumbs/shelter.jpg" data-src="../images/slides/shelter.jpg">
+                <div class="camera_caption fadeFromBottom">
+                    It supports captions, HTML elements and videos and <em>it's validated in HTML5</em> (<a href="http://validator.w3.org/check?uri=http%3A%2F%2Fwww.pixedelic.com%2Fplugins%2Fcamera%2F&amp;charset=%28detect+automatically%29&amp;doctype=Inline&amp;group=0&amp;user-agent=W3C_Validator%2F1.2" target="_blank">have a look</a>)
+                </div>
+            </div>
+            <div data-thumb="../images/slides/thumbs/tree.jpg" data-src="../images/slides/tree.jpg">
+                <div class="camera_caption fadeFromBottom">
+                    Different color skins and layouts available, <em>fullscreen ready too</em>
+                </div>
+            </div>
+        </div><!-- #camera_wrap_1 -->
+    </div><!-- .fluid_container -->
+</div>
+
+<!-- https://codepen.io/ericrasch/pen/zjDBx -->
+<div class="escribircomentario">
+    <div id="cebecera">
+        <h2>1 comentario</h2>
+        <div class="opciones">
+        <div class="styled-select slate">
+            <select>
+                <option>Opciones</option>
+                <option>Ver primero mejor valorado</option>
+                <option>Primero más antiguos</option>
+                <option>Primero más recientes</option>
+            </select>
+        </div></div>
+    </div>
+    <div class="formulario2">
+    <form action="#" method="post" id="commentform" onsubmit="return false">
+        <div class="autor">
+            <a href="#"><img class="user-avatar" src="https://img.weblogssl.com/css/xataka/p/v6/images/avatar.png" alt="Usuario"></a>
+            <a href="#"> Entra para comentar </a>
+            <a id="normas" href="#" target="_blank">Normas de participación</a>
+        </div>
+        <div class="comment-write-input">
+            <textarea name="text" cols="60" rows="10" class="commentBox" required="true"></textarea>
+        </div>
+        <fieldset class="comment-write-notify">
+            <legend>Recibir por e-mail:</legend>
+            <p><input name="notify" value="1" id="subscribe-comments" type="radio"> <label for="subscribe-comments">Todos</label></p>
+            <p><input name="notify" value="2" id="subscribe-replys" type="radio"> <label for="subscribe-replys">Sólo respuestas a los míos</label></p>
+            <p><input name="notify" checked="checked" value="0" id="subscribe-not" type="radio"> <label for="subscribe-not">Nada</label> </p>
+        </fieldset>
+        <div class="comment-submit">
+            <button class="boton_1" disabled="disabled">Publicar</button>
+        </div>
+    </form>
+    </div>
+</div>
+
+<div class="comentarios">
+    <div class="orden"><a href="">#1</a></div>
+        <div class="comentario1">
+        <div class="author">
+            <a class="comment-author-avatar" href="infousuario.html" title="Ir a la página de usuario de Álex" rel="nofollow">
+                <img class="user-avatar" src="https://img.weblogssl.com/avatar/normal/1166462_2.png" alt="Avatar de Álex">
+            </a>
+            <p class="author-name">
+                <a href="infousuario.html" rel="nofollow">
+                    Álex
+                </a>
+            </p>
+
+            <div class="stars">
+                <img src="https://img.weblogssl.com/css/xataka/p/v6/images/stars-3.png">
+            </div>
+        </div>
+
+        <div class="comment-date">
+            <a class="permanlink" href="#c1197449" title="Copiar enlace a este comentario">
+                <time class="comment-time" datetime="2017-12-07">Publicado hace: 19 horas</time>
+            </a>
+        </div>
+
+        <div class="contenido">
+            <p></p><p>"La energia ni se crea ni se destruye, solo se transforma"<br>
+            Bien, el bitcoin parece violar la ley de conservación de la masa, pues transforma la energía en ansia especuladora.</p><p>Cito: "Las lavadoras, los iPad y las televisiones también consumen mucha energía".<br>
+            Esa carta es un *comodín/joker* sacado de la manga para bordar un repoker en defensa de un argumento que se desmonta por si solo. Esto son cosas materiales que, con mayor o menor acierto, producen ALGO (servicios, productividad laboral, ocio). Cosas tangibles, no-burbujeras per se, más allá de la especulación (aunque también la contemplen).<br>
+            Bajo esa visión, también los tractores que trabajan el campo consumen mucha energía.. Y los camiones que transportan mercancias, o la industria del metal, etc, etc<br>
+            Recordemos que el consumo energético es "algo tangible": La energía puede estar en la naturaleza (sol, viento, mareas, etc), pero hay que materializarla. Lo que sale del enchufe no es, para nada, virtual.<br>
+            El minado de bitcoin deglute esta energia y la expulsa de nuevo al universo en forma de calor (aumento de la entropía) y ansia especulativa. <br>
+            Que nadie se vaya a creer que el argumento de que, como EEUU y China consumen mucha energía, el voraz consumo energético del bitcoin quda legitimizado.<br>
+            Un baremo un poco más coherente de la realidad energética del bitcoin es emparejar <br>
+            en el excel la columna del consumo energético con la de la producción de bienes tangibles.</p><p></p>
+        </div>
+
+        <div class="acciones">
+            <ul>
+                <li class="fa fa-reply">Responder</li>
+                <li class="fa fa-bar-chart">  Reportar (spam, insultos)</li>
+                <li class="fa fa-comment">  21 votos, karma: 318.00</li>
+                <li class="fa fa-thumbs-up">  Vota Positivo</li>
+                <li class="fa fa-thumbs-down">  Vota Negativo</li>
+            </ul>
+        </div>
+        </div>
+    </li>
+</div>
+
+<footer class="footer-distributed">
+    <div class="footer-left">
+        <a href="index.html"><img src="../images/logo.PNG" alt="NotTec Logo" width="120" height="60"></a>
+        <p class="footer-links">
+            <a href="index.html">Inicio</a>
+            ·
+            <a href="#">Sobre nosotros</a>
+            ·
+            <a href="#">Contacto</a>
+            ·
+            <a href="#">FAQ</a>
+            ·
+            <a href="#">Servicios</a>
+            ·
+            <a href="#">Negocio</a>
+        </p>
+        <p class="footer-company-name">notTec &copy; 2017</p>
+    </div>
+    <div class="footer-center">
+        <div>
+            <i class="fa fa-map-marker"></i>
+            <p><span>3º, C/ Pasdesca Nº 3</span> Las Palmas de G.C, España</p>
+        </div>
+        <div>
+            <i class="fa fa-phone"></i>
+            <p>+34 928 725 173</p>
+        </div>
+        <div>
+            <i class="fa fa-envelope"></i>
+            <p><a href="mailto:contacto@nottec.com">contacto@nottec.com</a></p>
+        </div>
+    </div>
+    <div class="footer-right">
+        <p class="footer-company-about">
+            <span>Sobre nosotros</span>
+            notTec es una publicación de notTec SL. para todos los apacionados de la tecnología. Se ocupa
+            de contar de manera rigurosa y con pasión la actualidad tecnolgógica como de analizar en profundidad
+            los principales lanzamientos y compararlos con otros modelos similares.
+        </p>
+        <div class="footer-icons">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-google"></i></a>
+            <a href="#"><i class="fa fa-github"></i></a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

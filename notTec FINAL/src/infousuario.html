@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>NotTec</title>
+    <link rel="shortcut icon" href="../images/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/footer-distributed-with-address-and-phones.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/stylesign.css" />
+    <link rel="stylesheet" type="text/css" href="../css/infouserstyle.css" />
+    <link rel="stylesheet" type="text/css" href="../css/dropdown.css" />
+    <script type='text/javascript' src='../script/dropdownsearch.js'></script>
+</head>
+<body>
+
+<div class="cabecera">
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">NotTec</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="#">Contacto</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="logIn.html">Login</a></li>
+                <li><a href="signUp.html">Regístrate</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="logo">
+        <a href="index.html"><img src="../images/logo.PNG" alt="NotTec Logo" width="296" height="153"></a>
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Categorías</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="gangas.html">Gangas</a>
+                <a href="#">Tecnología</a>
+                <a href="#">Series</a>
+            </div>
+        </div>
+        <form onsubmit="submitFn(this, event);">
+            <div class="search-wrapper">
+                <div class="input-holder">
+                    <input type="text" class="search-input" placeholder="Busca en nuestra web" />
+                    <button class="search-icon" onclick="searchToggle(this, event);"><span></span></button>
+                </div>
+                <span class="close" onclick="searchToggle(this, event);"></span>
+                <div class="result-container">
+
+                </div>
+            </div>
+        </form>
+        <div class="rrss" id="parche">
+            <a href="https://es-es.facebook.com/"><img src="../images/rrss1.png" alt="Red Social 1" width="53" height="53"border="0"></a>
+            <a href="https://plus.google.com/"><img src="../images/rrss2.png" alt="Red Social 2" width="53" height="53"border="0"></a>
+            <a href="https://twitter.com/"><img src="../images/rrss3.png" alt="Red Social 3" width="53" height="53"border="0"></a>
+        </div>
+    </div>
+</div>
+
+<div id="profile" class="tarjeta">
+        <a href="infousuario.html" class="photo">
+            <img src="https://img.weblogssl.com/avatar/normal/1166462_2.png" class="photo">
+        </a>
+        <h1 class="nickname">Àlex</h1>
+        <div class="profile-data">
+            <p class="karma-level">
+                Karma: <img src="https://img.weblogssl.com/css/xataka/p/v6/images/stars-3.png"> <strong>49</strong> puntos de 100
+            </p>
+            <p class="registered">Miembro de notTec desde <abbr class="timeago" title="2017-03-20T13:58:02+00:00">hace 9 meses</abbr></p>
+            <p class="last-event">
+                Última actividad <abbr class="timeago" title="2017-12-06 10:55:01+00:00">hace unos 22 minutos</abbr>
+            </p>
+        </div>
+        <blockquote>Siempre fuerte</blockquote>
+</div>
+
+<div id="activity">
+    <div class="panes">
+        <div id="my-activity" class="user-activity" style="display: block;">
+            <div class="posts">
+                <h3><span>Posts favoritos</span></h3>
+                <div class="item">
+                    <div class="expert">
+                        <a href="">
+                            <img src="https://i.blogs.es/d6d006/tesla-model-3/32_32.jpg" alt="Cómo comprar un coche eléctrico: guía paso a paso con todo lo que hay que mirar">
+                        </a>
+                    </div>
+                    <h4>
+                        <a href="">Cómo comprar un coche eléctrico: guía paso a paso con todo lo que hay que mirar</a>
+                    </h4>
+                    <p><a href="">
+                        Supongamos que estás planteándote la compra de un coche nuevo. Es una compra muy importante pues...</a></p>
+                </div>
+
+                <div class="item">
+                    <div class="expert">
+                        <a href="">
+                            <img src="https://i.blogs.es/24b045/20684247088_9ed514cd89_b/32_32.jpg" alt="Así es como las nanopartículas de la contaminación atmosférica pasan a la sangre y provocan enfermedades">
+                        </a>
+                    </div>
+                    <h4>
+                        <a href="">Así es como las nanopartículas de la contaminación atmosférica pasan a la sangre y provocan enfermedades</a>
+                    </h4>
+                    <p><a href="">
+                        La contaminación atmosférica es un tipo de contaminación rara. La tenemos tan normalizada en nuestro...</a></p>
+                </div>
+
+                <div class="item">
+                    <div class="expert">
+                        <a href="">
+                            <img src="https://i.blogs.es/79c76b/4837714644_1aa4561d08_b/32_32.jpg" alt="33 bellísimas imágenes de objetos bajo el microscopio  que son fondos de pantalla perfectos">
+                        </a>
+                    </div>
+                    <h4>
+                        <a href="">33 bellísimas imágenes de objetos bajo el microscopio  que son fondos de pantalla perfectos</a>
+                    </h4>
+                    <p><a href="">
+                        No busques más, aquí tienes 33 imágenes espectaculares y tremendamente bellas de objetos y organismos...</a></p>
+                </div>
+
+                <p class="more">
+                    <span>
+                            <img src="https://img.weblogssl.com/css/xataka/p/v6/images/feed16.png" alt="RSS"></a> <a href="" title="Ver todos los posts favoritos de ">Ver todos
+                        </a>
+                    </span>
+                </p>
+            </div>
+
+            <div class="convs">
+                <h3><span>Conversaciones</span></h3>
+                <div id="comment-activity">
+                    <h4>Àlex ha hecho <strong>201 comentarios</strong> en notTec:</h4>
+                    <ul>
+                        <li>9 brillantes</li>
+                        <li>27 interesantes</li>
+                        <li>147 normales</li>
+                        <li>18 flojos</li>
+                        <li>0 irrelevantes</li>
+                    </ul>
+                </div>
+
+                <div class="item">
+                    <div class="to-comments">
+                        <a class="fa fa-comments" href="" title="Ver los 14 comentarios en el post">14</a>
+                    </div>
+                    <h4>En <strong>El sector de la IA sólo tiene 300.000 ingenieros cuando hacen falta millones, según Tencent</strong>
+                        <span>12 nuevos comentarios</span>
+                    </h4>
+                    <p><a href="">Lo de siempre. En vez de buscar trabajadores con años de experiencia, busca trabajadores con menos experiencia...</a></p>
+                    <ul>
+                        <li class="fa fa-gavel"> karma: <strong>80</strong> | interesante  </li>
+                        <li class="fa fa-pencil" > 2017-12-06 10:55:01</li>
+                    </ul>
+                    <div class="subscribe_form" style="display:none"></div>
+                    <div class="exito" style="display: none;"></div>
+                </div>
+
+                <div class="item">
+                    <div class="to-comments">
+                        <a class="fa fa-comments" href="" title="Ver los 29 comentarios en el post">29</a>
+                    </div>
+                    <h4>En <strong>El Lamborghini Urus es un impresionante SUV de 200.000 dólares con autonomía de nivel 2 totalmente equipado </strong>
+                        <span>16 nuevos comentarios</span>
+                    </h4>
+                    <p><a href="">Pues a mi me habría encantado poderme ahorrar los más de mil euros que me costó sacarme el carnet...</a></p>
+                    <ul>
+                        <li class="fa fa-gavel"> karma: <strong>10</strong> | normal  </li>
+                        <li class="fa fa-pencil"> 2017-12-05 16:46:54</li>
+                    </ul>
+                    <div class="subscribe_form" style="display:none"></div>
+                    <div class="exito" style="display: none;"></div>
+                </div>
+
+                <div class="item">
+                    <div class="to-comments">
+                        <a class="fa fa-comments" href="" title="Ver los 13 comentarios en el post">13</a>
+                    </div>
+                    <h4>En <strong>El 5G sigue ganando velocidad: Samsung consigue 1,7Gbps en un tren en movimiento</strong>
+                        <span>4 nuevos comentarios</span>
+                    </h4>
+                    <p><a href="">Y no digo lo contrario. Pero todas las compañías telefónicas están estudiando ya de cómo implementarán...</a></p>
+                    <ul>
+
+                        <li class="fa fa-gavel" > karma: <strong>10</strong> | normal</li>
+                        <li class="fa fa-pencil"> 2017-12-05 16:41:09</li>
+                    </ul>
+                    <div class="subscribe_form" style="display:none"></div>
+                    <div class="exito" style="display: none;"></div>
+                </div>
+
+                <div class="item">
+                    <div class="to-comments">
+                        <a class="fa fa-comments" href="" title="Ver los 28 comentarios en el post">28</a>
+                    </div>
+                    <h4>En <strong>Apple finalmente pagará los 13.000 millones de euros por las ayudas fiscales recibidas en Irlanda</strong>
+                        <span>18 nuevos comentarios</span>
+                    </h4>
+                    <p><a href="">Es justo a lo que me refería, hacerlo a nivel europeo. Pensar que en España se cambiará mientras PP/C's...</a></p>
+                    <ul>
+                        <li class="fa fa-gavel"> karma: <strong>-13.75</strong> | flojo  </li>
+                        <li class="fa fa-pencil"> 2017-12-04 18:34:52</li>
+                    </ul>
+                    <div class="subscribe_form" style="display:none"></div>
+                    <div class="exito" style="display: none;"></div>
+                </div>
+
+                <p class="more">
+                    <span>
+                            <img src="https://img.weblogssl.com/css/xataka/p/v6/images/feed16.png" alt="RSS"></a> <a href="" title="Ver todas las conversaciones de alexbf">Ver todos
+                        </a>
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <footer class="footer-distributed">
+        <div class="footer-left">
+            <a href="index.html"><img src="../images/logo.PNG" alt="NotTec Logo" width="120" height="60"></a>
+            <p class="footer-links">
+                <a href="index.html">Inicio</a>
+                ·
+                <a href="#">Sobre nosotros</a>
+                ·
+                <a href="#">Contacto</a>
+                ·
+                <a href="#">FAQ</a>
+                ·
+                <a href="#">Servicios</a>
+                ·
+                <a href="#">Negocio</a>
+            </p>
+            <p class="footer-company-name">notTec &copy; 2017</p>
+        </div>
+        <div class="footer-center">
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>3º, C/ Pasdesca Nº 3</span> Las Palmas de G.C, España</p>
+            </div>
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>+34 928 725 173</p>
+            </div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:contacto@nottec.com">contacto@nottec.com</a></p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p class="footer-company-about">
+                <span>Sobre nosotros</span>
+                notTec es una publicación de notTec SL. para todos los apacionados de la tecnología. Se ocupa
+                de contar de manera rigurosa y con pasión la actualidad tecnolgógica como de analizar en profundidad
+                los principales lanzamientos y compararlos con otros modelos similares.
+            </p>
+            <div class="footer-icons">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-google"></i></a>
+                <a href="#"><i class="fa fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

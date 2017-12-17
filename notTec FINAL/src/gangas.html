@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>NotTec - Gangas</title>
+    <link rel="shortcut icon" href="../images/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/footer-distributed-with-address-and-phones.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css" />
+    <script src="../script/filtro.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/dropdown.css" />
+    <script type='text/javascript' src='../script/dropdownsearch.js'></script>
+
+</head>
+<body>
+<div class="cabecera">
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">NotTec</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="#">Contacto</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="logIn.html">Login</a></li>
+                <li><a href="signUp.html">Regístrate</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="logo">
+        <a href="index.html"><img src="../images/logo.PNG" alt="NotTec Logo" width="296" height="153"></a>
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Categorías</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="#">Gangas</a>
+                <a href="#">Tecnología</a>
+                <a href="#">Series</a>
+            </div>
+        </div>
+        <form onsubmit="submitFn(this, event);">
+            <div class="search-wrapper">
+                <div class="input-holder">
+                    <input type="text" class="search-input" placeholder="Busca en nuestra web" />
+                    <button class="search-icon" onclick="searchToggle(this, event);"><span></span></button>
+                </div>
+                <span class="close" onclick="searchToggle(this, event);"></span>
+                <div class="result-container">
+
+                </div>
+            </div>
+        </form>
+        <div class="rrss">
+            <a href="https://es-es.facebook.com/"><img src="../images/rrss1.png" alt="Red Social 1" width="53" height="53"border="0"></a>
+            <a href="https://plus.google.com/"><img src="../images/rrss2.png" alt="Red Social 2" width="53" height="53"border="0"></a>
+            <a href="https://twitter.com/"><img src="../images/rrss3.png" alt="Red Social 3" width="53" height="53"border="0"></a>
+        </div>
+    </div>
+</div>
+
+<div class="contenedor">
+    <br>
+    <div class="cuerpo_contenedor">
+        <div class="lista_filtros">
+            <a href="#" class="filtro" categoria="Todo">Todo</a>
+            <a href="#" class="filtro" categoria="0-99">Entre 0 y 99 Euros</a>
+            <a href="#" class="filtro" categoria="100-199">Entre 100 y 199 Euros</a>
+            <a href="#" class="filtro" categoria="200-299">Entre 200 y 299 Euros</a>
+            <a href="#" class="filtro" categoria="+300">Más de 300 Euros</a>
+        </div>
+
+        <section class ="lista_gangas">
+            <div class="ganga" categoria="+300">
+                <img src="../images/ganga.jpg" alt="ganga1">
+                <a href="#">GANGA DE 500 Euros</a>
+            </div>
+            <div class="ganga" categoria="0-99">
+                <img src="../images/ganga.jpg" alt="ganga2">
+                <a href="#">GANGA DE 50 Euros</a>
+            </div>
+            <div class="ganga" categoria="100-199">
+                <img src="../images/ganga.jpg" alt="ganga3">
+                <a href="#">GANGA DE 132 Euros</a>
+            </div>
+            <div class="ganga" categoria="200-299">
+                <img src="../images/ganga.jpg" alt="ganga4">
+                <a href="#">GANGA DE 256 Euros</a>
+            </div>
+            <div class="ganga" categoria="100-199">
+                <img src="../images/ganga.jpg" alt="ganga5">
+                <a href="#">GANGA DE 157 Euros</a>
+            </div>
+            <div class="ganga" categoria="0-99">
+                <img src="../images/ganga.jpg" alt="ganga6">
+                <a href="#">GANGA DE 24 Euros</a>
+            </div>
+        </section>
+    </div>
+</div>
+
+
+<footer class="footer-distributed">
+    <div class="footer-left">
+        <a href="index.html"><img src="../images/logo.PNG" alt="NotTec Logo" width="120" height="60"></a>
+        <p class="footer-links">
+            <a href="index.html">Inicio</a>
+            ·
+            <a href="#">Sobre nosotros</a>
+            ·
+            <a href="#">Contacto</a>
+            ·
+            <a href="#">FAQ</a>
+            ·
+            <a href="#">Servicios</a>
+            ·
+            <a href="#">Negocio</a>
+        </p>
+        <p class="footer-company-name">notTec &copy; 2017</p>
+    </div>
+    <div class="footer-center">
+        <div>
+            <i class="fa fa-map-marker"></i>
+            <p><span>3º, C/ Pasdesca Nº 3</span> Las Palmas de G.C, España</p>
+        </div>
+        <div>
+            <i class="fa fa-phone"></i>
+            <p>+34 928 725 173</p>
+        </div>
+        <div>
+            <i class="fa fa-envelope"></i>
+            <p><a href="mailto:contacto@nottec.com">contacto@nottec.com</a></p>
+        </div>
+    </div>
+    <div class="footer-right">
+        <p class="footer-company-about">
+            <span>Sobre nosotros</span>
+            notTec es una publicación de notTec SL. para todos los apacionados de la tecnología. Se ocupa
+            de contar de manera rigurosa y con pasión la actualidad tecnolgógica como de analizar en profundidad
+            los principales lanzamientos y compararlos con otros modelos similares.
+        </p>
+        <div class="footer-icons">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-google"></i></a>
+            <a href="#"><i class="fa fa-github"></i></a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
